@@ -8,9 +8,9 @@ import pic5 from "@/public/pic5.png";
 const pictures: StaticImageData[] = [pic2, pic3, pic4, pic5];
 function Hero() {
   return (
-    <div className="flex flex-col items-center gap-5">
+    <div className="flex flex-col items-center gap-5 max-w-[500px]">
       <h1 className="text-5xl font-extrabold">VENTURES.co</h1>
-      <div className="flext justify-items-start  ">
+      <div className="justify-items-start  ">
         <h2 className="text-sm mb-3 font-medium">Company Background</h2>
         <p className="text-[10px] text-gray-400">
           Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officia
@@ -19,7 +19,7 @@ function Hero() {
           saepe incidunt excepturi.
         </p>
       </div>
-      <div className="flext justify-items-start  ">
+      <div className="justify-items-start  ">
         <h2 className="text-sm mb-3 font-medium">Our Service</h2>
         <p className="text-[10px] text-gray-400">
           Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officia
