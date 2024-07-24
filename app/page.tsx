@@ -4,7 +4,7 @@ import Hero from "@/components/_components/Hero";
 export default function Home() {
   return (
     <>
-      <main className="flex min-h-screen flex-col items-center gap-3 pt-2 px-6 ">
+      <main className="flex min-h-screen flex-col items-center gap-3 pt-2 px-6  lg:gap-8">
         <Header />
         <Hero />
       </main>

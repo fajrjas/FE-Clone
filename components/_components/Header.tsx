@@ -29,23 +29,24 @@ const icons = [
 
 export default function Header() {
   return (
-    <Card className="w-[350px] h-[470px] border-transparent">
+    <Card className="min-w-[300px] h-[470px] md:min-w-[600px] md:h-[615px] lg:h-[740px] border transition-all ">
       {/* I dont know if it's picture kaya text lang....*/}
-      <CardDescription className="text-sm font-bold text-black text-center pt-2">
+      <CardDescription className="text-sm font-bold text-black text-center pt-2 lg:text-lg ">
         zwift..
       </CardDescription>
-      <div className="relative w-[300px] h-[150px] mx-auto -top-2">
+      <div className="relative min-w-[300px] md:w-[550px] lg:w-[700px] h-[150px] md:h-[250px] mx-7 -top-2 transition-all ">
         <Image
           src={"/bg.png"}
           alt="profile-image"
           fill
           priority={true}
-          className="object-cover rounded-lg mt-5"
+          // placeholder="blur"
+          className="object-cover rounded-lg mt-5 "
         />
       </div>
       <CardContent className="-translate-y-12 flex items-center justify-center">
-        <CardHeader className="grid place-items-center  text-center">
-          <Avatar className="w-20 h-20">
+        <CardHeader className="grid place-items-center text-center lg:gap-3">
+          <Avatar className="w-20 h-20 md:w-28 md:h-28 lg:w-32 lg:h-32">
             <AvatarImage src="/profile.png" />
             <AvatarFallback>CN</AvatarFallback>
           </Avatar>
@@ -57,30 +58,32 @@ export default function Header() {
         className="object-cover rounded-full"
       />
     </div> */}
-          <CardTitle className="mb-2">John Doe</CardTitle>
+          <CardTitle className="mb-2 md:text-2xl transition lg:text-4xl">
+            John Doe
+          </CardTitle>
           <div>
-            <CardDescription className="text-sm">
+            <CardDescription className="text-sm md:text-base lg:text-2xl">
               Chief Techonology Officer
             </CardDescription>
-            <CardDescription className="text-[13px]">
+            <CardDescription className="text-[13px] md:text-sm lg:text-xl">
               JohnDoe@gmail.com
             </CardDescription>
-            <CardDescription className="text-[13px]">
+            <CardDescription className="text-[13px] md:text-sm lg:text-xl">
               +639123456789
             </CardDescription>
           </div>
-          <CardContent className="flex gap-2 pt-3 ">
+          <CardContent className="flex gap-2 pt-3  lg:gap-6">
             <div>
               <button className="rounded-full border-black border bg-none p-2 hover:bg-blue-50">
-                <HiOutlineEnvelope className="text-lg" />
+                <HiOutlineEnvelope className="text-lg lg:text-2xl" />
               </button>
-              <p className="text-[10px]">Add</p>
+              <p className="text-[10px] lg:text-lg">Add</p>
             </div>
             <div>
               <button className="rounded-full border-black border bg-none p-2 hover:bg-blue-50">
-                <CiBookmark className="text-lg" />
+                <CiBookmark className="text-lg lg:text-2xl" />
               </button>
-              <p className="text-[10px]">Save</p>
+              <p className="text-[10px] lg:text-xl">Save</p>
             </div>
           </CardContent>
         </CardHeader>
@@ -88,7 +91,11 @@ export default function Header() {
       <CardFooter className="flex justify-between -translate-y-24">
         {icons.map((icon, i) => {
           return (
-            <Button variant={"ghost"} key={i} className="text-lg">
+            <Button
+              variant={"ghost"}
+              key={i}
+              className="text-lg md:text-xl lg:text-2xl"
+            >
               {icon}
             </Button>
           );
