@@ -29,36 +29,28 @@ const icons = [
 
 export default function Header() {
   return (
-    <Card className="min-w-[300px] h-[470px] md:min-w-[600px] md:h-[615px] lg:h-[740px] border transition-all ">
+    <Card className="min-w-[300px]  md:min-w-[600px] border transition-all ">
       {/* I dont know if it's picture kaya text lang....*/}
-      <CardDescription className="text-sm font-bold text-black text-center pt-2 lg:text-lg ">
+      <CardDescription className="text-sm font-bold text-black text-center p-2 lg:text-lg ">
         zwift..
       </CardDescription>
-      <div className="relative min-w-[300px] md:w-[550px] lg:w-[700px] h-[150px] md:h-[250px] mx-7 -top-2 transition-all ">
+      <div className="relative min-w-[300px] md:w-[550px] lg:w-[700px] h-[150px] md:h-[250px] mx-7 transition-all translate-y-12 -mt-12 ">
         <Image
           src={"/bg.png"}
           alt="profile-image"
           fill
           priority={true}
           // placeholder="blur"
-          className="object-cover rounded-lg mt-5 "
+          className="object-cover rounded-lg"
         />
       </div>
-      <CardContent className="-translate-y-12 flex items-center justify-center">
-        <CardHeader className="grid place-items-center text-center lg:gap-3">
+      <CardContent className="flex items-center p-0 justify-center">
+        <CardHeader className="grid place-items-center text-center lg:gap-3 p-0">
           <Avatar className="w-20 h-20 md:w-28 md:h-28 lg:w-32 lg:h-32">
             <AvatarImage src="/profile.png" />
-            <AvatarFallback>CN</AvatarFallback>
+            <AvatarFallback>JD</AvatarFallback>
           </Avatar>
-          {/* <div className="relative w-20 h-20 ">
-      <Avatar
-        src={"/profile.png"}
-        alt="profile-image"
-        fill
-        className="object-cover rounded-full"
-      />
-    </div> */}
-          <CardTitle className="mb-2 md:text-2xl transition lg:text-4xl">
+          <CardTitle className=" md:text-2xl transition lg:text-4xl">
             John Doe
           </CardTitle>
           <div>
@@ -72,7 +64,7 @@ export default function Header() {
               +639123456789
             </CardDescription>
           </div>
-          <CardContent className="flex gap-2 pt-3  lg:gap-6">
+          <CardContent className="flex gap-2 pt-3 items-center lg:gap-6">
             <div>
               <button className="rounded-full border-black border bg-none p-2 hover:bg-blue-50">
                 <HiOutlineEnvelope className="text-lg lg:text-2xl" />
@@ -88,7 +80,7 @@ export default function Header() {
           </CardContent>
         </CardHeader>
       </CardContent>
-      <CardFooter className="flex justify-between -translate-y-24">
+      <CardFooter className="flex justify-between p-2">
         {icons.map((icon, i) => {
           return (
             <Button
